@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgba(15,4,76,255);
+        text-align: center;
+        
+    }
+    h1{
+        color: #fff;
+    }
+    h2{
+        color: #fff;
+        border: 3px solid white;
+        padding: 2% 0%;
+        margin: 3% 0% 1% 0%;
+        /* height: 60px; */
+    
+    }
+    button{
+        height: 60px;
+        width: 50%;
+        font-size: 240%;
+        color: rgba(15,4,76,255);
+        font-weight: bolder;
+        margin: 2% .5% 0% 0%;
+    }
+    .math{
+        display: flex;
+    }
+    .col{
+        display: flex;
+        flex-direction: column;
+    }
+    .row1{
+        display: flex;
+    }
+    .r3{
+        display: flex;
+    }
+    .r3 button{
+        height: 150px;
+    }
+    .circ{
+        display: flex;
+    }
+    .circ button{
+        height: 120px;
+    }
+</style>
+<body>
+    <div class="col">
+        <h1>HELLO MASTER USE ME AS YOU WISH</h1>
+            <h2 ><span id="result"></span></h2>
+        <div class="row1">
+            
+            <button id="firstnumber"> first number( <span id="first"></span> )</button>
+            <button id="secondnumber"> second number( <span id="second"></span> )</button>
+        
+        </div>
+       <div class="math">
+            <button id="plus">+</button>
+            <button id="minus">-</button>
+            <button id="mult">*</button>
+            <button id="devi">/</button>
+            <button id="dmul">**</button>
+        </div>
+        <div class="r3">
+            <button id="sin">sin(first number)</button>
+            <button id="cos">cos(first number)</button>
+            <button id="log">log(first number)</button>
+            <button id="ceil">ceil(first number)</button>
+            <button id="floor">floor(first number)</button>
+        </div>
+        <div class="circ">
+            <button id="cirr">circumference of a circle <br> (r = First Number = <span id="cir"></span> )</button>
+            <button id="arrr">Circle area <br> (r = First Number = <span id="arr"></span> )</button>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    <script>
+        var x=0;
+        var y=0;
+        firstnumber.addEventListener("click" ,function() {
+        x= Number(prompt("enter first number"));
+        first.innerHTML = x;
+        cir.innerHTML =x;
+        arr.innerHTML=x;
+    });
+    secondnumber.addEventListener("click" ,function() {
+        y= Number(prompt("enter second number"));
+        second.innerHTML = y;
+    });
+    plus.addEventListener("click" ,function() {
+        var z=x+y;
+        result.innerHTML = z;
+
+    });
+    minus.addEventListener("click" ,function() {
+        var z=x-y;
+        result.innerHTML = z;
+
+    });
+    mult.addEventListener("click" ,function() {
+        var z=x*y;
+        result.innerHTML = z;
+
+    });
+    devi.addEventListener("click" ,function() {
+        var z=x/y;
+        
+        result.innerHTML = z;
+
+    });
+    dmul.addEventListener("click" ,function() {
+        var z=x**y;
+        result.innerHTML = z;
+
+    });
+    sin.addEventListener("click" ,function() {
+        var z=Math.sin(x * Math.PI/180 ) ;
+        result.innerHTML = z;
+
+    });
+    cos.addEventListener("click" ,function() {
+        var z=Math.cos(x * Math.PI/180 ) ;
+        result.innerHTML = z;
+
+    });
+    log.addEventListener("click" ,function() {
+        var z=Math.log(x) ;
+        result.innerHTML = z;
+
+    });
+    ceil.addEventListener("click" ,function() {
+        var z=Math.ceil(x) ;
+        result.innerHTML = z;
+
+    });
+    floor.addEventListener("click" ,function() {
+        var z=Math.floor(x) ;
+        result.innerHTML = z;
+
+    });
+    arrr.addEventListener("click" ,function() {
+        const p = Math.PI
+        var z=p*x*x;
+        result.innerHTML = z;
+
+    });
+    cirr.addEventListener("click" ,function() {
+        const p = Math.PI
+        var z=2*p*x;
+        result.innerHTML = z;
+
+    });
+    </script>
+
+    
+</body>
+</html>
